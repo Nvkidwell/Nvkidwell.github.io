@@ -1,0 +1,241 @@
+/* Chart Styling */
+.highcharts-strong {
+    font-weight: bold;
+}
+
+.highcharts-figure {
+    min-width: 320px;
+    max-width: 800px; /* You can adjust the max width */
+    margin: 5em auto;
+    height: 1000px; /* Set a height for the chart */
+    top: 0%;
+    padding: 1em;
+    background-color: #00000000; /* Subtle background for the chart */
+    border-radius: 8px; /* Rounded corners for modern feel */
+}
+
+#container {
+    height: 80%; /* Allow chart to fill the container */
+    width: 100%; /* Allow chart to fill the container */
+}
+
+.highcharts-description {
+    margin: 0.3rem 10px;
+}
+
+/* Data Table Styling */
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb00;
+    margin: 5px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 1.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f800;
+}
+
+.highcharts-data-table tr:hover {
+    background: #000000;
+}
+
+/* Tooltip Styling */
+.highcharts-tooltip text {
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.75); /* Darker background for tooltips */
+    padding: 0.5em;
+    border-radius: 5px;
+    color: #000000;
+}
+
+/* Adjusting other styles */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    padding: 0 2rem;
+    font-weight: 600;
+}
+
+.ml11 {
+    font-weight: 700;
+    font-size: 3.5em;
+}
+
+.ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+}
+
+.ml11 .line1 {
+    top: 0;
+    left: 0;
+}
+
+.ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.ml5 {
+    position: relative;
+    font-weight: 300;
+    font-size: 4.5em;
+    color: #fff;
+}
+
+.ml5 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+    line-height: 1em;
+}
+
+.ml5 .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 0.5 0;
+}
+
+.ml5 .letters {
+    display: inline-block;
+    opacity: 0;
+}
+
+.ml14 {
+    font-weight: 200;
+    font-size: 3.2em;
+}
+
+.ml14 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+
+.ml14 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 100% 100%;
+    bottom: 0;
+}
+
+.ml14 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+/* Responsive Chart */
+@media (max-width: 500px) {
+    .highcharts-figure,
+    .highcharts-data-table table {
+        width: 100%;
+        padding: 1em;
+    }
+    .highcharts-title {
+        font-size: 1.4rem; /* Adjust title size for small screens */
+    }
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 320px;
+    max-width: 700px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+.highcharts-description {
+    margin: 0.3rem 10px;
+}

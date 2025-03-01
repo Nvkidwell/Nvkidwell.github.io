@@ -3,9 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Nicholas Kidwell Portfolio</title>
+
+    <!-- Link to PP Neue Montreal font -->
+    <link href="https://fonts.cdnfonts.com/css/pp-neue-montreal?styles=158867" rel="stylesheet">
+    
+    <!-- Link to TypeIt.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.2/dist/typeit.min.js"></script>
+
+    <!-- Highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/timeline.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'PP Neue Montreal', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Chart styling */
+        .highcharts-figure {
+            width: 50%; 
+            height: 1200px; /* Fixed height for the chart */
+            margin: 0 auto; /* Center horizontally */
+             top: 100%;
+            display: block; /* Ensure it behaves like a block-level element */
+            padding: 20px;
+        }
+
+
+        .highcharts-description {
+            margin: 0.3rem 10px;
+            font-size: 1rem;
+        }
+                /* Image styling */
+                .image-container {
+            width: 50%; /* Set the image container width to occupy the right side */
+            padding-left: 1400px;
+            padding-bottom: 1px; 
+            opacity: 90%;
+        }
+
+        .image-container img {
+            width: 50%; /* Set the image to take up the full width of the container */
+            height: auto;
+            border-radius: 1px; /* Optional: to round the corners of the image */
+            display: block; /* Ensure it behaves like a block-level element */
+        }
+
+        /* Background Image Styles */
+        .background-image {
+            opacity: 0;
+            width: 100%;
+            height: 100vh;
+            background-image: url('IMG_3933.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 10%;
+            left: 0;
+            z-index: -1;
+            transition: opacity 10s ease-in-out;
+        }
+
+        .background-image.visible {
+            opacity: 0.4;
+        }
+                /* Styling for TypeIt text animations */
+                .ml11, .ml5, .ml14, .ml3 {
+            font-weight: 700;
+            font-size: 3.5em;
+            color: #fff;
+            text-align: center;
+            padding-top: 2em;
+        }
+                /* Responsive Design */
+                @media (max-width: 768px) {
+            .highcharts-figure {
+                width: 90%;
+                height: 400px;
+            }
+
+            .image-container {
+                width: 60%;
+                padding-top: 2em;
+            }
+            .ml11, .ml5, .ml14, .ml3 {
+                font-size: 2.5em;
+            }
+        }
+
+
+        
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <!-- Element where the TypeIt effect will run -->
+    <div id="element"></div>
+
+    <!-- Background Image -->
+    <div class="background-image"></div>
+    <div class="me-image"></div>
+
+    <!-- Highcharts Timeline -->
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            This timeline chart highlights the significant milestones and accomplishments in my Data Science career.
+        </p>
+    </figure>
+        <!-- Image Container Section -->
+        <div class="image-container">
+            <img src="Me.png" alt="Mepng">
+        </div>
+
+
+    <script src="scripts.js"></script>
+
+    
+
+    <script>
+        // TypeIt effect for "Nicholas Kidwell"
+        new TypeIt("#element", { 
+            lifeLike: false, 
+            speed: 0,
+            cursor: false,  // Hide cursor
+            afterComplete: function (instance) {
+                instance.destroy();  // Destroy instance after completion
+                // Once the TypeIt effect completes, show the "Data Scientist" heading
+                document.querySelector('.ml14').classList.add('visible');
+            }
+        })
+        .type("N").pause(332)
+        .type("i").pause(241)
+        .type("c").pause(191)
+        .type("h").pause(373)
+        .type("o").pause(401)
+        .type("l").pause(189)
+        .type("a").pause(130)
+        .type("s").pause(1278)
+        .delete(1).pause(255)
+        .delete(1).pause(244)
+        .delete(1).pause(295)
+        .delete(1).pause(457)
+        .delete(1).pause(639)
+        .type("k").pause(320)
+        .type(" ").pause(399)
+        .type("K").pause(317)
+        .type("i").pause(223)
+        .type("d").pause(153)
+        .type("w").pause(137)
+        .type("e").pause(242)
+        .type("l").pause(152)
+        .type("l").pause(100)
+        .type(" | ").pause(500)
+        .type("Data").pause(100)
+        .type(" ").pause(100)
+        .type("Scientist").go();
+
+        // Set background image visibility after page load
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.background-image').classList.add('visible');
+            }, 3000);  // Wait 3 seconds before showing the background image
+        };
+                // Spider (Radar) Chart Configuration
+        Highcharts.chart('spider-container', {
+            chart: {
+                polar: true,
+                type: 'line'
+            },
+            title: {
+                text: 'Data Science Skills',
+                x: 0
+            },
+            pane: {
+                size: '80%'
+            },
+            xAxis: {
+                categories: ['Python', 'SQL', 'Machine Learning', 'Data Visualization', 'Statistics', 'Big Data'],
+                tickmarkPlacement: 'on',
+                lineWidth: 0
+            },
+            yAxis: {
+                gridLineInterpolation: 'polygon',
+                lineWidth: 0,
+                min: 0
+            },
+            series: [{
+                name: 'Skills',
+                data: [5, 4, 5, 4, 5, 3],
+                pointPlacement: 'on'
+            }]
+        });
+    </script>
 </body>
 </html>
