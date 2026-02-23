@@ -3,10 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Uh Oh...</title>
+
+  <!-- Open Graph / iMessage Preview Tags -->
+  <meta property="og:type"         content="website" />
+  <meta property="og:title"        content="Top Gear Cast Coming to Somerset, Kentucky" />
+  <meta property="og:description"  content="The legendary Top Gear crew is making a surprise stop in Somerset, KY. Details inside!" />
+  <meta property="og:image"        content="https://files.fm/u/ee5xgrxqv9" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Top Gear Cast Coming to Somerset, Kentucky" />
+  <meta name="twitter:description" content="The legendary Top Gear crew is making a surprise stop in Somerset, KY. Details inside!" />
+  <meta name="twitter:image"       content="https://files.fm/u/ee5xgrxqv9" />
+
+  <title>Top Gear Cast Coming to Somerset, Kentucky</title>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       background-color: #0d0d0d;
       display: flex;
@@ -16,18 +29,12 @@
       font-family: 'Courier New', Courier, monospace;
       overflow: hidden;
     }
-
     .container {
       text-align: center;
       padding: 40px;
       animation: fadeIn 1s ease-in;
     }
-
-    .skull {
-      font-size: 100px;
-      animation: shake 0.5s infinite alternate;
-    }
-
+    .skull { font-size: 100px; animation: shake 0.5s infinite alternate; }
     h1 {
       color: #ff2222;
       font-size: 2.5rem;
@@ -35,14 +42,7 @@
       text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
       animation: flicker 1.5s infinite;
     }
-
-    p {
-      color: #ffcc00;
-      font-size: 1.4rem;
-      margin-top: 15px;
-      text-shadow: 0 0 10px #ffcc00;
-    }
-
+    p { color: #ffcc00; font-size: 1.4rem; margin-top: 15px; text-shadow: 0 0 10px #ffcc00; }
     .warning {
       margin-top: 30px;
       color: #ff6600;
@@ -53,26 +53,10 @@
       display: inline-block;
       animation: pulse 1s infinite;
     }
-
-    @keyframes shake {
-      from { transform: rotate(-10deg); }
-      to   { transform: rotate(10deg); }
-    }
-
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.7; }
-    }
-
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 5px #ff6600; }
-      50%       { box-shadow: 0 0 20px #ff6600; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.8); }
-      to   { opacity: 1; transform: scale(1); }
-    }
+    @keyframes shake { from { transform: rotate(-10deg); } to { transform: rotate(10deg); } }
+    @keyframes flicker { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+    @keyframes pulse { 0%, 100% { box-shadow: 0 0 5px #ff6600; } 50% { box-shadow: 0 0 20px #ff6600; } }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
   </style>
 </head>
 <body>
@@ -84,4 +68,3 @@
   </div>
 </body>
 </html>
-
